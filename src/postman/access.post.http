@@ -6,7 +6,7 @@ Content-Type: application/json
 x-api-key: a94baea875d251ea049827251bb992e5
 
 {
-    "name": "shop name 2",
-    "email": "shop02@example.com",
+    "name": "shop name 3",
+    "email": "shop03@example.com",
     "password": "shop_password"
 }

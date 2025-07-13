@@ -20,10 +20,14 @@ const keyTokenSchema = new Schema({
         type: String,
         required: true
     },
-    refreshToken: {
+    refreshTokensUsed: {
         type: Array,
         default: []
     },
+    refreshToken: {
+        type: String,
+        require: true
+    }
 
 }, {
     timestamps: true, // Automatically manage createdAt and updatedAt fields
