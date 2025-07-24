@@ -7,6 +7,7 @@ const {
     electronic,
     furniture,
 } = require("../models/product.model");
+const { insertInventory } = require("../models/repository/inventory.repo");
 const {
     findAllDraftForShop,
     publishProductByShop,
@@ -14,6 +15,8 @@ const {
     unPublishProductByShop,
     searchProducts,
     updateProductById,
+    findAllProducts,
+    findProduct
 } = require("../models/repository/product.repo");
 const { removeUndefinedObject, updateNestedObjectParser } = require("../utils");
 // const productConfig = require("./product.config");
@@ -129,7 +132,17 @@ class Product {
     }
 
     async createProduct(product_id) {
-        return await product.create({ ...this, _id: product_id });
+        const newProduct = await product.create({ ...this, _id: product_id });
+        if (newProduct) {
+
+            await insertInventory({
+                productId: newProduct._id,
+                shopId: this.product_shop,
+                stock: this.product_quantity
+            });
+
+        }
+        return newProduct;
     }
 
     async updateProduct(productId, bodyUpdate) {
