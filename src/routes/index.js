@@ -9,7 +9,9 @@ router.use(apiKey)
 
 // check permissions
 router.use(permissions('0000')); // replace '0000' with the required permission code
-
+router.use('/v1/api/cart', require('./cart')); // access routes
+router.use('/v1/api/inventory', require('./inventory')); // access routes
+router.use('/v1/api/checkout', require('./checkout')); // access routes
 router.use('/v1/api/discount', require('./discount')); // access routes
 router.use('/v1/api/product', require('./product')); // access routes
 router.use('/v1/api', require('./access')); // access routes
