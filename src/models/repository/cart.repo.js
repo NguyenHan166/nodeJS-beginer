@@ -1,7 +1,7 @@
 'use strict';
 
 const { convertToObjectIdMongoDb } = require('../../utils');
-const {cartModel} = require('../models/cart.model');
+const {cartModel} = require('../cart.model');
 
 const findCartById = async (cartId) => {
     return await cartModel.findOne({ _id: convertToObjectIdMongoDb(cartId), cart_state: 'active' }).lean();

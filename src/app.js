@@ -6,6 +6,9 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 
 
+// require('./tests/inventory.test.js'); 
+// const productTest = require('./tests/product.test.js');
+// productTest.purchaseProduct('product:001', 10); // Example usage of product test
 // console.log(`Process::` , process.env)
 
 // init middlewares
