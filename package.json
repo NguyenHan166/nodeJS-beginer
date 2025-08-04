@@ -14,10 +14,12 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "amqplib": "^0.10.8",
     "axios": "^1.10.0",
     "dotenv": "^17.1.0",
     "express": "^5.1.0",
     "fs": "^0.0.1-security",
+    "kafkajs": "^2.2.4",
     "mongoose": "^8.16.1",
     "nodemon": "^3.1.10",
     "redis": "^5.6.1",

@@ -14,6 +14,7 @@ router.use('/v1/api/inventory', require('./inventory')); // access routes
 router.use('/v1/api/checkout', require('./checkout')); // access routes
 router.use('/v1/api/discount', require('./discount')); // access routes
 router.use('/v1/api/product', require('./product')); // access routes
+router.use('/v1/api/notification', require('./notification')); // access routes
 router.use('/v1/api', require('./access')); // access routes
 
 module.exports = router;
